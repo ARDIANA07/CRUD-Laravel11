@@ -10,7 +10,7 @@
         <ul class="sidebar-menu">
             <li class="menu-header"><b>Dashboard</b></li>
             <li>
-                <a href="/" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                <a href="/home" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="menu-header"><b>Master</b></li>
             <li>

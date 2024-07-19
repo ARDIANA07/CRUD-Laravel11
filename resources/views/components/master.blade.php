@@ -15,18 +15,12 @@
         <!-- Template CSS -->
         <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/datatables/datatables.min.css') }}">
+        <link rel="stylesheet"
+            href="{{ asset('assets/datatables/Datatables-1.10.16/css/dataTables.bootstrap4.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/modules/izitoast/css/iziToast.css') }}">
         <!-- Start GA -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-
-            gtag('config', 'UA-94034622-3');
-        </script>
         <!-- /END GA -->
     </head>
 
@@ -56,10 +50,26 @@
         <!-- JS Libraies -->
 
         <!-- Page Specific JS File -->
+        <script src="{{ asset('assets/datatables/datatables.min.js') }}"></script>
+        <script src="{{ asset('assets/datatables/Datatables-1.10.16/js/dataTables.bootstrap4.min.js') }}"></script>
+        <script src="{{ asset('assets/modules/izitoast/js/iziToast.min.js') }}"></script>
+        <script src="{{ asset('assets/modules/sweetalert/sweetalert.min.js') }}"></script>
 
         <!-- Template JS File -->
         <script src="{{ asset('assets/js/scripts.js') }}"></script>
         <script src="{{ asset('assets/js/custom.js') }}"></script>
+
+        @if (session('sukses'))
+            <script>
+                iziToast.success({
+                    title: 'Berhasil',
+                    message: '{{ session('sukses') }}',
+                    possition: 'topCenter'
+                });
+            </script>
+        @endif
+
+        @stack('script')
     </body>
 
 </html>

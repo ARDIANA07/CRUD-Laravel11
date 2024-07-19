@@ -19,14 +19,14 @@
                             <div class="form-group">
                                 <label for="kode">Kode</label>
                                 <input type="text" name="kode" id="kode" class="form-control"
-                                    placeholder="Isikan kode">
+                                    placeholder="Isikan kode" value="{{ $kategori->kode }}">
                             </div>
                             <div class="form-group">
                                 <label for="name">Nama Kategori</label>
                                 <input type="text" name="name" id="name" class="form-control"
-                                    placeholder="Isikan nama kategori">
+                                    placeholder="Isikan nama kategori" value="{{ $kategori->name }}">
                             </div>
-                            <button class="btn btn-sm btn-success" type="submit">Simpan</button>
+                            <button class="btn btn-sm btn-warning" type="submit">Update</button>
                         </form>
                     </div>
                 </div>
